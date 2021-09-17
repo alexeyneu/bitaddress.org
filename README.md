@@ -1,3 +1,14 @@
+
+# run
+```
+sudo apt install npm
+sudo apt install node-grunt-cli
+npm install grunt-combine
+npm install grunt-lineending
+grunt
+
+```
+  
 # bitaddress.org
 JavaScript Client-Side Bitcoin Wallet Generator
 
