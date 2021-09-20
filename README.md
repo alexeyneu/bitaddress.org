@@ -10,9 +10,9 @@ grunt
 ```
   
 # bitaddress.org
-JavaScript Client-Side Bitcoin Wallet Generator
+JavaScript Client-Side Goldencoin Wallet Generator
 
-Now Bitcoin addresses and their corresponding private key can be conveniently 
+Now Goldencoin addresses and their corresponding private key can be conveniently 
 generated in a web browser.
 
 The bitaddress.org project provides an all-in-one HTML document with embedded
@@ -21,11 +21,11 @@ XMLHttpRequest's (no AJAX). The benefit of this technique is you can load the
 JavaScript locally and trust that the JavaScript did not change after being 
 loaded. 
 
-Here is a link to the BitcoinTalk.org forum topic discussing this project:
+Here is a link to the GoldencoinTalk.org forum topic discussing this project:
 https://bitcointalk.org/index.php?topic=43496.0
 
 
-Please send DONATIONS for this project to Bitcoin Address: 
+Please send DONATIONS for this project to Goldencoin Address: 
 1NiNja1bUmhSoTXozBRBEtR8LeF9TGbZBN
 
 
@@ -67,7 +67,7 @@ window.SecureRandom	| BSD License
 window.EllipticCurve	|	BSD License
 window.BigInteger |	BSD License
 window.QRCode | MIT License
-window.Bitcoin | MIT License
+window.Goldencoin | MIT License
 
 The bitaddress.org software is available under The MIT License (MIT)
 Copyright (c) 2011-2013 bitaddress.org

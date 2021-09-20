@@ -51,7 +51,7 @@
 
 		var showKeyPool = function () {
 			document.getElementById('statuskeypoolgood').style.display = 'block';
-			document.getElementById("keypooltextarea").value = Bitcoin.KeyPool.toString();
+			document.getElementById("keypooltextarea").value = Goldencoin.KeyPool.toString();
 		};
 
 		return {

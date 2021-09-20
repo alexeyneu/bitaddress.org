@@ -102,7 +102,7 @@ ninja.wallets.paperwallet = {
 		if (ninja.wallets.paperwallet.encrypt) {
 			var compressed = true;
 			ninja.privateKey.BIP38GenerateECAddressAsync(ninja.wallets.paperwallet.intermediatePoint, compressed, function (address, encryptedKey) {
-				Bitcoin.KeyPool.push(new Bitcoin.Bip38Key(address, encryptedKey));
+				Goldencoin.KeyPool.push(new Goldencoin.Bip38Key(address, encryptedKey));
 				if (ninja.wallets.paperwallet.useArtisticWallet) {
 					ninja.wallets.paperwallet.showArtisticWallet(idPostFix, address, encryptedKey);
 				}
@@ -112,10 +112,10 @@ ninja.wallets.paperwallet = {
 			});
 		}
 		else {
-			var key = new Bitcoin.ECKey(false);
+			var key = new Goldencoin.ECKey(false);
 			key.setCompressed(true);
-			var bitcoinAddress = key.getBitcoinAddress();
-			var privateKeyWif = key.getBitcoinWalletImportFormat();
+			var bitcoinAddress = key.getGoldencoinAddress();
+			var privateKeyWif = key.getGoldencoinWalletImportFormat();
 			if (ninja.wallets.paperwallet.useArtisticWallet) {
 				ninja.wallets.paperwallet.showArtisticWallet(idPostFix, bitcoinAddress, privateKeyWif);
 			}

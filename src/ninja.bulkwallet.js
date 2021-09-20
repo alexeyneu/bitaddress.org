@@ -20,7 +20,7 @@
 		},
 
 		// use this function to bulk generate addresses
-		// rowLimit: number of Bitcoin Addresses to generate
+		// rowLimit: number of Goldencoin Addresses to generate
 		// startIndex: add this number to the row index for output purposes
 		// returns:
 		// index,bitcoinAddress,privateKeyWif
@@ -59,7 +59,7 @@
 
 				if (bulk.encrypt) {
 					privateKey.BIP38GenerateECAddressAsync(bulk.intermediatePoint, bulk.compressedAddrs, function (address, encryptedKey) {
-						Bitcoin.KeyPool.push(new Bitcoin.Bip38Key(address, encryptedKey));
+						Goldencoin.KeyPool.push(new Goldencoin.Bip38Key(address, encryptedKey));
 
 						bulk.csv.push((bulk.csvRowLimit - bulk.csvRowsRemaining + bulk.csvStartIndex)
 										+ ",\"" + address + "\",\"" + encryptedKey
@@ -72,12 +72,12 @@
 					});
 				}
 				else {
-					var key = new Bitcoin.ECKey(false);
+					var key = new Goldencoin.ECKey(false);
 					key.setCompressed(bulk.compressedAddrs);
 					bulk.csv.push((bulk.csvRowLimit - bulk.csvRowsRemaining + bulk.csvStartIndex)
-										+ ",\"" + key.getBitcoinAddress() + "\",\"" + key.toString("wif")
+										+ ",\"" + key.getGoldencoinAddress() + "\",\"" + key.toString("wif")
 										//+	"\",\"" + key.toString("wifcomp")    // uncomment these lines to add different private key formats to the CSV
-										//+ "\",\"" + key.getBitcoinHexFormat() 
+										//+ "\",\"" + key.getGoldencoinHexFormat() 
 										//+ "\",\"" + key.toString("base64") 
 										+ "\"");
 					document.getElementById("bulktextarea").value = translator.get("bulkgeneratingaddresses") + bulk.csvRowsRemaining;

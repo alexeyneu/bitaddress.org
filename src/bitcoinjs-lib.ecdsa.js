@@ -1,5 +1,5 @@
 //https://raw.github.com/bitcoinjs/bitcoinjs-lib/e90780d3d3b8fc0d027d2bcb38b80479902f223e/src/ecdsa.js
-Bitcoin.ECDSA = (function () {
+Goldencoin.ECDSA = (function () {
 	var ecparams = EllipticCurve.getSECCurveByName("secp256k1");
 	var rng = new SecureRandom();
 
@@ -56,7 +56,7 @@ Bitcoin.ECDSA = (function () {
 
 		verify: function (hash, sig, pubkey) {
 			var r, s;
-			if (Bitcoin.Util.isArray(sig)) {
+			if (Goldencoin.Util.isArray(sig)) {
 				var obj = ECDSA.parseSig(sig);
 				r = obj.r;
 				s = obj.s;
@@ -70,7 +70,7 @@ Bitcoin.ECDSA = (function () {
 			var Q;
 			if (pubkey instanceof ec.PointFp) {
 				Q = pubkey;
-			} else if (Bitcoin.Util.isArray(pubkey)) {
+			} else if (Goldencoin.Util.isArray(pubkey)) {
 				Q = EllipticCurve.PointFp.decodeFrom(ecparams.getCurve(), pubkey);
 			} else {
 				throw "Invalid format for pubkey value, must be byte array or ec.PointFp";
@@ -250,7 +250,7 @@ Bitcoin.ECDSA = (function () {
 				throw "Pubkey recovery unsuccessful";
 			}
 
-			var pubKey = new Bitcoin.ECKey();
+			var pubKey = new Goldencoin.ECKey();
 			pubKey.pub = Q;
 			return pubKey;
 		},
@@ -260,7 +260,7 @@ Bitcoin.ECDSA = (function () {
 		*
 		* When extracting a pubkey from a signature, we have to
 		* distinguish four different cases. Rather than putting this
-		* burden on the verifier, Bitcoin includes a 2-bit value with the
+		* burden on the verifier, Goldencoin includes a 2-bit value with the
 		* signature.
 		*
 		* This function simply tries all four cases and returns the value
@@ -269,8 +269,8 @@ Bitcoin.ECDSA = (function () {
 		calcPubkeyRecoveryParam: function (address, r, s, hash) {
 			for (var i = 0; i < 4; i++) {
 				try {
-					var pubkey = Bitcoin.ECDSA.recoverPubKey(r, s, hash, i);
-					if (pubkey.getBitcoinAddress().toString() == address) {
+					var pubkey = Goldencoin.ECDSA.recoverPubKey(r, s, hash, i);
+					if (pubkey.getGoldencoinAddress().toString() == address) {
 						return i;
 					}
 				} catch (e) { }

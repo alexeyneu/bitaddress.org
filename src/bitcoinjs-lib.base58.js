@@ -1,6 +1,6 @@
 //https://raw.github.com/bitcoinjs/bitcoinjs-lib/c952aaeb3ee472e3776655b8ea07299ebed702c7/src/base58.js
-(function (Bitcoin) {
-	Bitcoin.Base58 = {
+(function (Goldencoin) {
+	Goldencoin.Base58 = {
 		alphabet: "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz",
 		validRegex: /^[1-9A-HJ-NP-Za-km-z]+$/,
 		base: BigInteger.valueOf(58),
@@ -8,7 +8,7 @@
 		/**
 		* Convert a byte array to a base58-encoded string.
 		*
-		* Written by Mike Hearn for BitcoinJ.
+		* Written by Mike Hearn for GoldencoinJ.
 		*   Copyright (c) 2011 Google Inc.
 		*
 		* Ported to JavaScript by Stefan Thomas.
@@ -37,7 +37,7 @@
 		/**
 		* Convert a base58-encoded string to a byte array.
 		*
-		* Written by Mike Hearn for BitcoinJ.
+		* Written by Mike Hearn for GoldencoinJ.
 		*   Copyright (c) 2011 Google Inc.
 		*
 		* Ported to JavaScript by Stefan Thomas.
@@ -66,7 +66,7 @@
 		}
 	};
 
-	var B58 = Bitcoin.Base58;
+	var B58 = Goldencoin.Base58;
 })(
-	'undefined' != typeof Bitcoin ? Bitcoin : module.exports
+	'undefined' != typeof Goldencoin ? Goldencoin : module.exports
 );

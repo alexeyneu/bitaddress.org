@@ -18,10 +18,10 @@
 		// generate bitcoin address and private key and update information in the HTML
 		generateNewAddressAndKey: function () {
 			try {
-				var key = new Bitcoin.ECKey(false);
+				var key = new Goldencoin.ECKey(false);
 				key.setCompressed(true);
-				var bitcoinAddress = key.getBitcoinAddress();
-				var privateKeyWif = key.getBitcoinWalletImportFormat();
+				var bitcoinAddress = key.getGoldencoinAddress();
+				var privateKeyWif = key.getGoldencoinWalletImportFormat();
 				document.getElementById("btcaddress").innerHTML = bitcoinAddress;
 				document.getElementById("btcprivwif").innerHTML = privateKeyWif;
 				var keyValuePair = {

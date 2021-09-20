@@ -2,7 +2,7 @@
 	translator.translations["ru"] = {
 		// javascript alerts or messages
 		"testneteditionactivated": "Активирован режим TESTNET",
-		"paperlabelbitcoinaddress": "Адрес Bitcoin кошелька:",
+		"paperlabelbitcoinaddress": "Адрес Goldencoin кошелька:",
 		"paperlabelprivatekey": "Приватный Ключ:",
 		"paperlabelencryptedkey": "Зашифрованный Приватный Ключ (требуется пароль)",
 		"bulkgeneratingaddresses": "Генерация адресов... ",
@@ -65,7 +65,7 @@
 		"statuslabelprotocolbad2": "download", //TODO: please translate
 		"statuslabelprotocolbad3": "the zip file from GitHub and run this generator offline as a local html file.", //TODO: please translate
 		"statusokprotocolbad": "OK", //TODO: please translate
-		"statuslabelkeypool1": "This is a log of all the Bitcoin Addresses and Private Keys you generated during your current session. Reloading the page will create a new session.", //TODO: please translate
+		"statuslabelkeypool1": "This is a log of all the Goldencoin Addresses and Private Keys you generated during your current session. Reloading the page will create a new session.", //TODO: please translate
 		"statuskeypoolrefresh": "Refresh", //TODO: please translate
 		"statusokkeypool": "OK", //TODO: please translate
 
@@ -145,7 +145,7 @@
 		"detailview": "Детальная информация",
 		"detailprint": "Распечатать",
 		"detaillabelnote1": "Ваш Приватный Ключ - это секретная информация, которую знаете только Вы. Этот ключ можно закодировать несколькими способами. Ниже вы видите адрес Биткоин и публичный ключ, которые соответствуют Вашему приватному ключу, если Ваш приватный ключ в одном из популярных форматов (WIF, WIFC, HEX, B64, MINI)",
-		"detaillabelnote2": "Приложение Bitcoin версии 0.6 и выше хранит ключи в сжатом формате. Это приложение также поддерживает импорт и экспорт приватных ключей командами importprivkey/dumpprivkey. Формат экспортированного ключа определяется кошельком, который сгенерировал адрес Биткоин.",
+		"detaillabelnote2": "Приложение Goldencoin версии 0.6 и выше хранит ключи в сжатом формате. Это приложение также поддерживает импорт и экспорт приватных ключей командами importprivkey/dumpprivkey. Формат экспортированного ключа определяется кошельком, который сгенерировал адрес Биткоин.",
 		"detaillabelbitcoinaddress": "Адрес Биткоин кошелька",
 		"detaillabelbitcoinaddresscomp": "Короткий адрес Биткоин кошелька",
 		"detaillabelpublickey": "Публичный ключ (130 символов [0-9A-F]):",
